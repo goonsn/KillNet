@@ -33,6 +33,7 @@ Esc > KILLNET in a level (party, voice, replays, settings), the KILLNET page in 
 ## Credits
 
 - Made by goonsn. Part of [Killcraft](https://github.com/goonsn/Killcraft).
+- Inspired by UltraLink
 - ULTRAKILL by Arsi "Hakita" Patala / New Blood Interactive. KillNet isn't affiliated with them and contains none of their files.
 
 ## License
