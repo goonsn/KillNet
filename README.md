@@ -3,7 +3,7 @@
 
 **Multiplayer for ULTRAKILL, over Steam.** Make a party, bring your friends, and play ULTRAKILL's levels together: the same enemies, the same bosses, the same arenas, with voice chat.
 
-KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcraft) on its own, without Minecraft. KillNet and Killcraft players can be in the same party. The source lives in the Killcraft repository; this one holds KillNet's downloads.
+KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcraft) on its own, without Minecraft. KillNet and Killcraft players can be in the same party. Its source is here (`src/`, the launcher in `launcher/app`): it's the same plugin as Killcraft's, run without Minecraft.
 
 ## What it does
 
@@ -18,7 +18,7 @@ KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcra
 
 **Easiest:** download `KillNet-Launcher-<version>.exe` from **Releases** and run it. It finds ULTRAKILL, installs BepInEx and KillNet, keeps them (and itself) updated, and starts the game. Leave MINECRAFT on OFF.
 
-> **"Windows protected your PC"?** The launcher isn't code-signed (a signing certificate costs money), so Windows SmartScreen warns about any new exe like it. Click **More info**, then **Run anyway**. Its source is in the [Killcraft repo](https://github.com/goonsn/Killcraft/tree/main/launcher/app) if you want to check it or build it yourself.
+> **"Windows protected your PC"?** The launcher isn't code-signed (a signing certificate costs money), so Windows SmartScreen warns about any new exe like it. Click **More info**, then **Run anyway**. Its source is in this repo (`launcher/app`) if you want to check it or build it yourself.
 >
 > **Installed with r2modman, Gale or the Thunderstore app?** Start ULTRAKILL from there instead: the launcher is for installs in the game's own folder (it tells you if it finds one in a mod manager).
 
@@ -33,6 +33,18 @@ Everyone in a party needs the same KillNet / Killcraft version.
 ## Settings
 
 Esc > KILLNET in a level (party, voice, replays, settings), the KILLNET page in ULTRAKILL's OPTIONS, or `ULTRAKILL\BepInEx\config\dev.killcraft.cfg`.
+
+## Building from source
+
+Needs the .NET SDK (6 or newer) and ULTRAKILL with BepInEx installed.
+
+```
+dotnet build -c Release
+```
+
+If ULTRAKILL isn't in `C:\Program Files (x86)\Steam\steamapps\common\ULTRAKILL`, add `-p:GameDir="X:\path\to\ULTRAKILL"`. The build copies `Killcraft.dll` into `BepInEx\plugins\Killcraft\` (the plugin keeps Killcraft's name; without Minecraft it runs as KillNet).
+
+The launcher (`launcher/app`, .NET Framework 4.8 WinForms): `cd launcher/app` then `dotnet build -c Release`. Its pictures come from `launcher/design` (`python art.py`, `python icon.py`; Pillow).
 
 ## Credits
 
