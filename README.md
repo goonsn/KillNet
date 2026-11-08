@@ -18,6 +18,10 @@ KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcra
 
 **Easiest:** download `KillNet-Launcher-<version>.exe` from **Releases** and run it. It finds ULTRAKILL, installs BepInEx and KillNet, keeps them (and itself) updated, and starts the game. Leave MINECRAFT on OFF.
 
+> **"Windows protected your PC"?** The launcher isn't code-signed (a signing certificate costs money), so Windows SmartScreen warns about any new exe like it. Click **More info**, then **Run anyway**. Its source is in the [Killcraft repo](https://github.com/goonsn/Killcraft/tree/main/launcher/app) if you want to check it or build it yourself.
+>
+> **Installed with r2modman, Gale or the Thunderstore app?** Start ULTRAKILL from there instead: the launcher is for installs in the game's own folder.
+
 **By hand:**
 
 1. Install **BepInEx 5** into ULTRAKILL: [BepInEx releases](https://github.com/BepInEx/BepInEx/releases) (`BepInEx_win_x64_5.4.x.zip`), unzipped into the ULTRAKILL folder. Start the game once.
