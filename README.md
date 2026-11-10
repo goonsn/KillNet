@@ -12,7 +12,11 @@ KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcra
 - **Voice chat** (push to talk, V; or an open mic) heard from where each V1 is, **text chat** (Enter in a level), player colours, a squad list with pings.
 - **Spectating** when you die, players bumping into each other (the host's choice), PvP (the host's choice), and being put back on solid ground if you fall out of the map.
 - **Replays:** every run is kept. REPLAYS in the main menu lists them with a CASE FILE (rank, damage, secrets, ...); watch them back alone or together with the party.
-- Your Discord status gets a Join button while you're in a party.
+- **MINOS PRIME mode:** one player becomes Minos Prime, the rest of the party fights him.
+- **Your look:** V1's colour, lights and wings' glow on a colour wheel, seen by everyone (and on your own arms).
+- More of the level shared: trams, hidden switches, fire, boss intros, and cutscene skips by vote.
+
+Since 2.0.2 KillNet's own download is **Steam only**: none of Killcraft's Minecraft side is in it (no other programs, no local ports, no Discord status). It's the same build as the one made for Thunderstore and Nexus.
 
 ## Install
 
@@ -25,7 +29,7 @@ KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcra
 **By hand:**
 
 1. Install **BepInEx 5** into ULTRAKILL: [BepInEx releases](https://github.com/BepInEx/BepInEx/releases) (`BepInEx_win_x64_5.4.x.zip`), unzipped into the ULTRAKILL folder. Start the game once.
-2. Download `KillNet-<version>.zip` from **Releases** and unzip it into `ULTRAKILL\BepInEx\plugins\`, so you have `ULTRAKILL\BepInEx\plugins\Killcraft\Killcraft.dll`. (The folder and the settings file are still named Killcraft.)
+2. Download `KillNet-<version>.zip` from **Releases** and unzip it into `ULTRAKILL\BepInEx\plugins\`, so you have `ULTRAKILL\BepInEx\plugins\KillNet\KillNet.dll`. (The settings file is still named after Killcraft.) Updating from 2.0.1 or older: delete `BepInEx\plugins\Killcraft\Killcraft.dll`, but keep the `replays` folder next to it.
 3. Start ULTRAKILL and press **PARTY** in the main menu.
 
 Everyone in a party needs the same KillNet / Killcraft version.
@@ -43,6 +47,14 @@ dotnet build -c Release
 ```
 
 If ULTRAKILL isn't in `C:\Program Files (x86)\Steam\steamapps\common\ULTRAKILL`, add `-p:GameDir="X:\path\to\ULTRAKILL"`. The build copies `Killcraft.dll` into `BepInEx\plugins\Killcraft\` (the plugin keeps Killcraft's name; without Minecraft it runs as KillNet).
+
+KillNet's own Steam-only build (what the releases ship), without any of Killcraft's Minecraft side compiled in:
+
+```
+dotnet build -c Release -p:KillNetOnly=true
+```
+
+It makes `KillNet.dll`; add `-p:PluginDir="X:\path\to\ULTRAKILL\BepInEx\plugins\KillNet"` to put it where the releases do (with `killcraft-shaders.bundle`, from a release).
 
 The launcher (`launcher/app`, .NET Framework 4.8 WinForms): `cd launcher/app` then `dotnet build -c Release`. Its pictures come from `launcher/design` (`python art.py`, `python icon.py`; Pillow).
 
