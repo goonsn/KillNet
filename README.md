@@ -12,8 +12,11 @@ KillNet is the multiplayer part of [Killcraft](https://github.com/goonsn/Killcra
 - **Voice chat** (push to talk, V; or an open mic) heard from where each V1 is, **text chat** (Enter in a level), player colours, a squad list with pings.
 - **Spectating** when you die, players bumping into each other (the host's choice), PvP (the host's choice), and being put back on solid ground if you fall out of the map.
 - **Replays:** every run is kept. REPLAYS in the main menu lists them with a CASE FILE (rank, damage, secrets, ...); watch them back alone or together with the party.
+- **Co-op or VERSUS** (the host's choice): play the level together, or race each other through it on your own, each level or a whole layer, won by score (rank, then style, then time) or by time. In VERSUS the others run beside you as ghosts.
+- **A party style meter** in co-op: ULTRAKILL's own style meter counts the whole party's style, with everyone's moves in their colour and the party's own ranks, up to ULTRAPARTY.
+- **Scoreboard** (Tab: kills, style, deaths, revives, best rank), **level votes**, enemy and boss health that grows with the party (the host's choice), and a new host who keeps the party's rules.
 - **MINOS PRIME mode:** one player becomes Minos Prime, the rest of the party fights him.
-- **Your look:** V1's colour, lights and wings' glow on a colour wheel, seen by everyone (and on your own arms).
+- **Your look:** V1's colour, lights and wings' glow on a colour wheel, seen by everyone (and on your own arms), and a hat.
 - More of the level shared: trams, hidden switches, fire, boss intros, and cutscene skips by vote.
 
 Since 2.0.2 KillNet's own download is **Steam only**: none of Killcraft's Minecraft side is in it (no other programs, no local ports, no Discord status). It's the same build as the one made for Thunderstore and Nexus.
